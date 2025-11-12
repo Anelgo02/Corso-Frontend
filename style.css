@@ -264,17 +264,3 @@ caption{
     text-align:center;
 }
 
-/*Esempio di transform rotate*/
-
-.ruota{
-    width:100px;
-    height:100px;
-    background-color:aqua;
-    margin:50px;
-    transition: transform 0.4s ease-in-out;
-}
-
-.ruota:hover{
-    transform:rotate(360deg);
-}
-
