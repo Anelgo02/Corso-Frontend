@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="it">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Un form di registrazione di prova per dimostrare l'utilizzo del tag form " />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Form di registrazione</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="container hedaer-inner" role="banner">
+            <div class="head-container">
+                <a href="./index.html">
+                    <svg href="./index.html" class="mySvg" width="50" height="50" viewBox="0 0 100 100">
+
+                        <rect width="100" height="100" rx="20" ry="20" fill="rgba(26, 160, 255, 0.855)" />
+                        <path d="M 20 70 Q 70 20, 80 50" stroke="white" stroke-width="10" fill="none"
+                            stroke-linecap="round" />
+
+                    </svg>
+                </a>
+                <h1>Registrazione</h1>
+            </div>
+            <nav aria-label="primary-nav" class="primary-nav">
+                <ul class="nav-list">
+                    <li><a href='./index.html'>Home</a></li>
+                    <li><a href='./registration.html'>Registrazione</a></li>
+                    <li><a href='./prodotti.html'>Prodotti</a></li>
+                    <li><a href="./about.html">Chi siamo</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h2>Modulo di registrazione</h2>
+            <p>Compila i campi sottostanti</p>
+            <form id="form-di-registrazione" method="post">
+                <fieldset>
+                    <legend>Dati personali</legend>
+                    <label for="name">Nome:</label>
+                    <input type="text" id='name' placeholder="Mario" required />
+
+                    <label for="surname">Cognome:</label>
+                    <input type="text" id='surname' placeholder="Rossi" required /><br />
+
+                    <label for="site">Sito web(opzionale):</label>
+                    <input type="url" id="site" />
+
+
+                    <label for="telefono">Numero di telefono:</label>
+                    <input type="tel" id="telefono" pattern="^(\+39)?\d{9,10}$" required placeholder="33138016333" />
+
+                    <label for="data-di-nascita">Data di nascita:</label>
+                    <input type="date" id="data-di-nascita" max="1999-12-31" required />
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required placeholder="mario1234@gmail.com"><br />
+
+
+                    <label for="username">Username:</label>
+                    <input type="text" id='username' placeholder="Mario12" required />
+
+                    <label for="password">Password (min. 12 caratteri):</label>
+                    <input id="password" type="password" required minLength="12" />
+
+                    <label for="nazione">Nazione</label>
+                    <select id="nazione" name="nazione">
+                        <option value="">Seleziona</option>
+                        <option value="It">Italia</option>
+                        <option value="Fr">Francia</option>
+                        <option value="De">Germania</option>
+                        <option value="En">Inghilterra</option>
+                    </select>
+
+                    <label for="review">Indice di gradimento:</label>
+                    <input type="range" id="review" value="100">
+
+                    <label for="prezzo">Credito da inserire:</label>
+                    <input type="number" id="prezzo" value="1.00" min="1.00" step="0.50" />
+
+                    <fieldset class="ruoli">
+                        <legend>Ruolo</legend>
+
+                        <label for="ruolo-cliente"><input type="radio" id="ruolo-cliente" name="ruolo" value="cliente"
+                                checked />Cliente</label>
+
+                        <label for="ruolo-fornitore"><input type="radio" id="ruolo-fornitore" name="ruolo"
+                                value="fornitore" />Fornitore</label>
+
+                    </fieldset>
+
+                    <section>
+                        <h3>Firma:</h3>
+                        <div class="container-firma">
+
+                            <canvas width="300px" height="200px" id="firma"></canvas>
+                        </div>
+                    </section>
+
+                    <div class="form-actions">
+                        <button type="reset">Reset</button>
+                        <button type="submit">Registrati</button>
+                    </div>
+
+
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy;2025-Corso Frontend</p>
+    </footer>
+
+    <script>
+
+        window.addEventListener('load', () => {
+
+            const canvas = document.querySelector('#firma');
+            const ctx = canvas.getContext('2d');
+
+            let painting = false;
+
+            function startPosition() {
+                painting = true;
+                draw(e);
+
+            }
+
+            function finishedPosition() {
+                painting = false;
+                ctx.beginPath();
+            }
+
+            function draw(e) {
+
+                //se painting e' false esco dalla funzione 
+                if (!painting) return;
+
+                //definisco gli attributi per il disegno
+                ctx.lineWidth = 4;
+                ctx.lineCap = "round";
+
+                //funzionamento
+                ctx.lineTo(e.offsetX, e.offsetY);
+                ctx.stroke();
+                ctx.beginPath();
+                ctx.moveTo(e.offsetX, e.offsetY);
+
+
+            }
+
+            //eventListener(evento atteso, funzione da attivare in concomitanza con l'evento)
+
+            canvas.addEventListener('mousedown', startPosition);
+            canvas.addEventListener('mouseup', finishedPosition);
+            canvas.addEventListener('mousemove', draw);
+
+
+
+        })
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, intial-scale=1" />
+    <meta name="author" content="Angelo" />
+    <meta name="description" content="Una pagina di prova per visualizzare i prodotti" />
+    <link rel="stylesheet" href="/style.css" />
+    <title>Pagina prodotti</title>
+</head>
+
+<body>
+        <header>
+        <div class="container hedaer-inner" role="banner">
+            <div class="head-container">
+                <a href="./index.html">
+                    <svg href="./index.html" class="mySvg" width="50" height="50" viewBox="0 0 100 100">
+
+                        <rect width="100" height="100" rx="20" ry="20" fill="rgba(26, 160, 255, 0.855)" />
+                        <path d="M 20 70 Q 70 20, 80 50" stroke="white" stroke-width="10" fill="none"
+                            stroke-linecap="round" />
+
+                    </svg>
+                </a>
+                <h1>Prodotti</h1>
+            </div>
+            <nav aria-label="primary-nav" class="primary-nav">
+                <ul class="nav-list">
+                    <li><a href='./index.html'>Home</a></li>
+                    <li><a href='./registration.html'>Registrazione</a></li>
+                    <li><a href='./prodotti.html'>Prodotti</a></li>
+                    <li><a href="./about.html">Chi siamo</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+
+        <section id="presentazione">
+            <h2>Il meglio per i nostri clienti</h2>
+            <p>Nel nostro store troverai solo il meglio per la tua passione!</p>
+            <figure class="img-container">
+                <img src="./ukulele.jpeg" alt="un ukulele in spiaggia" width="500" height="280" />
+                <figcaption>Questo è solo un esempio degli incredibili strumenti che potrai trovare nel nostro
+                    store.<br />Vieni a <strong>trovarci!</strong>
+                </figcaption>
+            </figure>
+        </section>
+
+        <section id="prodotti">
+            <h2>Tabella prodotti</h2>
+            <table class="tabella-prodotti">
+                <caption>tabella esemplificativa per mostrare i prodotti</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Descrizione</th>
+                        <th scope="col">Categoria</th>
+                        <th scope="col">Prezzo</th>
+                        <th scope="col">Etichetta</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>001</td>
+                        <td>Cuffie Bluetooth</td>
+                        <td>Dispositivo bluetooth per riproduzione musicale</td>
+                        <td>Audio</td>
+                        <td>$79.99</td>
+                        <td><span class="tag" id="esaurimento">In esaurimento</span></td>
+                    </tr>
+                    <tr>
+                        <td>002</td>
+                        <td>Chitarra elettrica</td>
+                        <td>Stratocaster Fender</td>
+                        <td>Musica</td>
+                        <td>$779.99</td>
+                        <td><span class="tag" id="offerta">In offerta</span></td>
+                    </tr>
+                    <tr>
+                        <td>003</td>
+                        <td>Plettro</td>
+                        <td>Plettro per chitarra</td>
+                        <td>Musica</td>
+                        <td>$9.99</td>
+                        <td><span class="tag">Nuovo</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="video">
+            <h2>Video di demo del prodotto 002</h2>
+            <div class="video-container">
+                <iframe width="607" height="304" src="https://www.youtube.com/embed/5LIE3BThJKw"
+                    title="Fender Deluxe Series Stratocaster Demo | Fender" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+        <section id="etichette">
+            <h2>Descrizione con etichette di un prodotto</h2>
+            <p>Etichette prodotto (inline):
+                <span class="tag" id="nuovo">Nuovo</span>
+                <span class="tag" id="offerta">In offerta</span>
+                <span class="tag" id="esaurimento">In esaurimento</span>
+            </p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy;2025-Corso Frontend</p>
+    </footer>
+
+</body>
+
+</html>

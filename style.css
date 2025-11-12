@@ -1,0 +1,280 @@
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html,body{
+    height:100%;
+    background:rgb(242, 242, 242);
+    line-height:1.45;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+body{
+    padding:18px;
+}
+
+header,main,footer{
+    background:rgb(255, 255, 255);
+    border: 1px solid rgb(142, 142, 142);
+    border-radius:10px;
+    padding:12px;
+    margin-top:18px;
+    margin-bottom:18px;
+}
+
+.risorse{
+    margin-left:16px;
+    margin-bottom:10px;
+}
+
+header h1, .primary-nav{
+    padding:2px
+}
+
+
+
+main h2{
+    margin-bottom:10px;
+}
+
+main section{
+    margin-top:16px;
+}
+
+.code-pre{
+    background:rgba(128, 128, 128, 0.395)
+}
+
+
+
+
+
+.nav-list{
+    list-style:none;
+    display: inline-flex;
+    gap:5px;   
+}
+
+.nav-list a{
+    margin-right:1rem;
+    color:black;
+    text-decoration:none;
+}
+
+.nav-list a:hover{
+    color:blue;
+    text-decoration:underline;
+}
+
+
+
+
+form{
+    margin-top:8px;
+}
+
+label{
+    display:block;
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+select,textarea{
+    width:100%;
+    padding:8px;
+    margin-top: 6px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+
+
+fieldset{
+    margin-top:10px;
+    border-radius:6px;
+    border: 1px solid #ccc;
+    padding:10px;
+}
+
+
+
+button{
+    padding:8px 12px;
+    border-radius:6px;
+    border:none;
+    background: rgba(0, 102, 255, 0.902);
+    color:#fff;
+    cursor:pointer;
+}
+
+button[type="reset"]{
+    background:grey;
+}
+
+footer{
+    text-align:center;
+    font-size:0.95rem;
+
+}
+
+.ruoli{
+    display:flex;
+    padding:1rem;
+    width:fit-content
+}
+
+.ruoli label{
+    margin-right:1rem;
+}
+
+.form-actions{
+    margin-top:1rem
+
+}
+
+.form-actions button{
+    margin-right:1rem;
+}
+
+.tabella-prodotti{
+    border-collapse:collapse;
+   
+    margin-top:8px;
+    width:100%;
+    font-size:1rem;
+}
+
+.tabella-prodotti th,td{
+    text-align:left;
+    padding:8px 10px;
+    border: 1px solid rgb(163, 163, 163);
+}
+
+caption{
+    text-align:left;
+    padding-bottom:8px;
+    font-weight:600;
+}
+
+.tabella-prodotti thead th{
+    background:rgba(16, 16, 16, 0.882);
+    color:#fafafa;
+}
+
+.video-container{
+    text-align:center;
+    margin-top:18px;
+}
+
+.tag{
+    display:inline-block;
+    padding:4px 8px;
+    background:rgba(57, 156, 226, 0.855);
+    border-radius:10px;
+    font-weight:700;
+    color:#fafafa
+}
+
+.tag#offerta{
+    background:rgb(1, 188, 1);
+}
+
+.tag#esaurimento{
+    background:rgba(235, 22, 22, 0.921);
+}
+
+.container-firma{
+    margin-top:8px;
+    border: 1px solid #aeaeae;
+    width:300px;
+    height:200px;
+
+}
+
+.head-container{
+    display:flex;
+    padding:0px 0px 10px;
+
+
+}
+
+.mySvg{
+    margin-right:10px;
+}
+
+.team-member figure{
+
+    display:flex;
+    align-items:flex-start;
+    gap:15px;
+    margin-bottom:20px;
+
+}
+
+.team-member figure img{
+    border-radius:50px 20px;
+    transition: transform 0.3 ease-in-out;
+}
+
+
+
+.team-member figure img:hover{
+    transform: scale(1.05);
+    box-shadow: 0 5px 10px rgba(41, 41, 41, 0.115);
+}
+
+.team-list{
+    list-style:none;
+    padding-left: 0;
+}
+
+.muted{
+    margin-bottom:20px;
+    font-weight:350;
+    font-style:italic;
+}
+
+#orari-table{
+    border-collapse:collapse;
+    margin-top:8px;
+    width:100%;
+    font-size:1rem;
+
+}
+
+#orari-table th,td{
+    text-align:left;
+    padding:8px 10px;
+    border:1px solid rgb(163,163,163)
+}
+
+#orari-table thead{
+    background:rgba(57, 156, 226, 0.763);
+    color:#ffffff;
+}
+
+.frame-container{
+    text-align:center;
+}
+
+/*Esempio di transform rotate*/
+
+.ruota{
+    width:100px;
+    height:100px;
+    background-color:aqua;
+    margin:50px;
+    transition: transform 0.4s ease-in-out;
+}
+
+.ruota:hover{
+    transform:rotate(360deg);
+}
+

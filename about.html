@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./style.css">
+    <title>Chi siamo</title>
+</head>
+
+<body>
+    <header>
+        <div class="container header-inner" role="banner">
+            <div class="head-container">
+                <a href="./index.html">
+                    <svg href="./index.html" class="mySvg" width="50" height="50" viewBox="0 0 100 100">
+
+                        <rect width="100" height="100" rx="20" ry="20" fill="rgba(26, 160, 255, 0.855)" />
+                        <path d="M 20 70 Q 70 20, 80 50" stroke="white" stroke-width="10" fill="none"
+                            stroke-linecap="round" />
+
+                    </svg>
+                </a>
+                <h1>Chi siamo</h1>
+            </div>
+            <nav aria-label="primary-nav" class="primary-nav">
+                <ul class="nav-list">
+                    <li><a href='./index.html'>Home</a></li>
+                    <li><a href='./registration.html'>Registrazione</a></li>
+                    <li><a href='./prodotti.html'>Prodotti</a></li>
+                    <li><a href="./about.html">Chi siamo</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="team" aria-labelledby="team-heading">
+            <h2 id="team-heading">Il nostro team</h2>
+            <p class="muted">La nostra azienda offre ai clienti un servizio d'eccellenza dal 1967. Viene messa la
+                massima cura in ogni
+                particolare
+                al fine di mantenere un altissimo standard di qualità. I nostri clienti sono il nostro più grande vanto,
+                facciamo sempre
+                il possibile per soddisfarli.
+            </p>
+
+            <ul class="team-list" role="list">
+                <li class="team-member">
+                    <figure>
+                        <img width="140" height="130"
+                            src="https://www.micad.it/wp-content/uploads/2025/06/team-micad-andrea-bazzu.png"
+                            alt="Ingegnere meccanico Mario Rossi" />
+                        <figcaption class="member-meta">
+                            <strong>Mario Rossi</strong>
+                            <p class="muted">Ingegnere Meccanico con 10 anni di esperienza, laureato presso
+                                l'universita' di Pisa. </p>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="team-member">
+                    <figure>
+                        <img width="140" height="130"
+                            src="https://www.micad.it/wp-content/uploads/2025/06/team-micad-elisabetta-marati.png"
+                            alt="Economista Elisabetta Scurati" />
+                        <figcaption class="member-meta">
+                            <strong>Elisabetta Scurati</strong>
+                            <p class="muted">Brillante economista aziendale con 20 anni di esperienza sul campo. Sempre
+                                pronta a trovare una soluzione innovativa ed efficace, grande attitudine di team working
+                                e problem solving.</p>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="team-member">
+                    <figure>
+                        <img width="140" height="130"
+                            src="https://www.micad.it/wp-content/uploads/2025/06/team-micad-amedeo-migali.png"
+                            alt="Ingegnere del software Amedeo Bianchi" />
+                        <figcaption class="member-meta">
+                            <strong>Amedeo Bianchi</strong>
+                            <p class="muted">Ingegnere del software con 15 anni di esperienza sul campo, background
+                                d'alto livello: ha lavorato presso FAANG e successivamente deciso di tornare in Italia.
+                            </p>
+                        </figcaption>
+                    </figure>
+                </li>
+            </ul>
+            <!--Lista dei membri del team ul-li, inserire per ogni membro un'immagine con figure e figcaption -->
+        </section>
+
+        <section id="orari" aria-labelledby="orari-heading">
+            <h2 id="orari-heading">Orari di lavoro</h2>
+
+            <div class="table-container">
+                <table id="orari-table" aria-describedby="orari-desc">
+                    <thead>
+                        <tr>
+                            <th scope="col">Giorno</th>
+                            <th scope="col">Mattina</th>
+                            <th scope="col">Pomeriggio</th>
+                            <th scope="col">Servizio offerto:</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Lunedì</td>
+                            <td>9:00 - 13:00</td>
+                            <td>14:00 - 19:00</td>
+                            <td>Assistenza Telefonica</td>
+                        </tr>
+                        <tr>
+                            <td>Martedi</td>
+                            <td>9:00 - 13:00</td>
+                            <td>14:00 - 19:00</td>
+                            <td>Assitenza Tecnica Operativa</td>
+                        </tr>
+                        <tr>
+                            <td>Mercoledì</td>
+                            <td>----------</td>
+                            <td>----------</td>
+                            <td>Giorno non lavorativo</td>
+                        </tr>
+                        <tr>
+                            <td>Giovedì</td>
+                            <td>9:00 - 13:00</td>
+                            <td>14:00 - 19:00</td>
+                            <td>Riunioni Interne</td>
+                        </tr>
+                        <tr>
+                            <td>Venerdì</td>
+                            <td>9:00 - 13:00</td>
+                            <td>14:00 - 17:00</td>
+                            <td>Ricezione clienti (Chiusura anticipata)</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="muted" id="orari-desc">Gli orari possono variare durante i periodi festivi</p>
+            </div>
+            <!-- tabella con gli orari lavorativi dell'azienda dal lunedi al venerdi-->
+        </section>
+
+        <hr />
+
+        <section id="dove-trovarci" aria-labelledyby="mappa-heading">
+            <h2 id="mappa-heading">Dove trovarci</h2>
+            <p class="muted">Mappa embedded di Google Maps per fornire la posizione della nostra sede lavorativa</p>
+            <div class="frame-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d380060.33500617143!2d12.206363658022145!3d41.909599739788014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f6196ece2f53b%3A0xc677990521fc8c54!2sVilla%20Luzzatti!5e0!3m2!1sit!2sit!4v1762941409060!5m2!1sit!2sit"
+                    width="500" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <p class="muted">V. Luigi Luzzatti, 25, 00185 Roma RM</p>
+            </div>
+            <!--inserire iframe con mappa incorporata per potere mostrare la sede dell'azienda-->
+        </section>
+
+        <hr />
+
+        <section id="contatti" aria-labelledby="contatti-heading">
+            <h2 id="contatt-heading">Contattaci</h2>
+            <form action="#" method="post" novalidate>
+                <fieldset>
+                    <legend>Invia un messaggio</legend>
+
+                    
+                        <label for="name">Nome*</label>
+                        <input id="name" name="nome" type="text" required placeholder="Mario" />
+
+                        <label for="surname">Cognome*</label>
+                        <input id="surname" name="cognome" type="text" required placeholder="Rossi" />
+
+                        <label for="email">Email*</label>
+                        <input id="email" name="email" type="email" required placeholder="mario@example.it" />
+
+                        <label for="oggetto">Oggetto</label>
+                        <input id="oggetto" name="oggetto" type="text" placeholder="Richiesta informazioni" />
+
+                        <label for="messaggio">Messaggio</label>
+                        <textarea id="messaggio" name="messaggio" rows="6" required
+                            placeholder="Scrivi qui il tuo messaggio..."></textarea>
+
+                        <div class="form-actions">
+                            <button type="reset">Reset</button>
+                            <button type="submit">Invia</button>
+                        </div>
+                    </fieldset>
+            </form>
+            <!--form di contatto CONTATTACI con input nome cognome email e textarea. Pulsante invia-->
+        </section>
+
+        <div class="ruota"></div>
+    </main>
+
+    <footer>
+        <p>&copy;2025-Corso Frontend</p>
+    </footer>
+</body>
+
+</html>
