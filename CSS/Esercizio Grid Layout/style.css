@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    min-height: 100vh;
+
+}
+
+nav,
+main,
+aside,
+footer {
+    padding: 1.3rem;
+}
+
+header {
+    background-color: #4A90E2;
+    color: white;
+    height: fit-content;
+    text-align: center;
+}
+
+header nav ul li a{
+    font-weight: 100;
+}
+
+header nav ul li a:hover {
+    color: white;
+    background-color: #4A90E2;
+    font-weight: bold;
+
+}
+
+nav {
+    background: linear-gradient(#4A90E2, #d9e0eab3);
+    position: sticky;
+    width: 100%
+}
+
+header nav ul li{
+    width: 100px;
+}
+
+aside {
+    background-color: whitesmoke;
+}
+
+main {
+    background-color: #ffffff;
+}
+
+footer {
+    color: white;
+    text-align: center;
+    background-color: #333;
+}
+
+nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    justify-content: center;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+aside ul {
+    list-style: none;
+}
+
+aside ul a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #37a4c9;
+}
+
+aside ul a:hover {
+    color: white;
+    background-color: #37a4c9;
+
+}
+
+body {
+    display: grid;
+    gap:1rem;
+    /* grid-template-columns: 1fr; */
+    grid-template-rows: max-content auto auto auto;
+    grid-template-areas:
+        "header"
+        "main"
+        "aside"
+        "footer";
+}
+
+header {
+    grid-area: header;
+}
+
+main {
+    grid-area: main;
+}
+
+aside {
+    grid-area: aside;
+}
+
+footer {
+    grid-area: footer;
+}
+
+@media(min-width:768px) {
+    body {
+        grid-template-columns: 3fr 1fr;
+        grid-template-rows: max-content 7fr 1fr;
+        grid-template-areas:
+            "header header"
+            "main aside"
+            "footer footer";
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.2rem;
+    }
+}
