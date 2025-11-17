@@ -1,0 +1,134 @@
+/* --- STILI DI BASE (Solo per rendere la pagina leggibile) --- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h2 {
+    border-left: 5px solid #007bff;
+    padding-left: 10px;
+    margin-top: 40px;
+}
+
+/* --- STILI VISIVI PER I CONTENITORI E GLI ITEM (Non riguardano Flexbox) --- */
+.flex-container {
+    background-color: #e0e0e0; /* Grigio chiaro */
+    border: 2px solid #333;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.item {
+    background-color: #007bff; /* Blu */
+    color: white;
+    font-size: 1.5rem;
+    padding: 15px;
+    margin: 5px; /* Un piccolo margine per separare i blocchi */
+    text-align: center;
+    border-radius: 4px;
+    width: 100px; /* Larghezza base per l'esercizio */
+}
+
+.big-item {
+    height: 80px;
+    background-color: #0056b3;
+}
+
+/* =========================================
+   QUI INIZIA LA LEZIONE SU FLEXBOX
+   ========================================= */
+
+/* ATTIVAZIONE FLEXBOX
+   Questa regola si applica a tutti i container dell'esercizio.
+   Senza questo, i div .item starebbero uno sotto l'altro (block).
+*/
+.flex-container {
+    display: flex;
+    
+    /* gap è una proprietà moderna utilissima: 
+       crea spazio tra gli elementi senza usare margin sui figli */
+    gap: 10px; 
+}
+
+
+/* --- SEZIONE 1: DIREZIONE --- */
+
+.direction-row {
+    /* Default: gli elementi si dispongono in riga da sinistra a destra */
+    flex-direction: row;
+}
+
+.direction-column {
+    /* Gli elementi si impilano verticalmente */
+    flex-direction: column;
+}
+
+
+/* --- SEZIONE 2: JUSTIFY CONTENT (Asse Principale - Orizzontale) --- */
+
+.justify-center {
+    /* Sposta tutto il blocco di elementi al centro della riga */
+    justify-content: center;
+}
+
+.justify-between {
+    /* Spinge il primo elemento all'inizio e l'ultimo alla fine. 
+       Lo spazio rimanente è distribuito equamente in mezzo. */
+    justify-content: space-between;
+}
+
+
+/* --- SEZIONE 3: ALIGN ITEMS (Asse Trasversale - Verticale) --- */
+
+/* Diamo un'altezza fissa al container per vedere l'effetto verticale */
+.height-fixed {
+    height: 200px; 
+}
+
+.align-center {
+    /* Centra gli elementi verticalmente nel contenitore */
+    align-items: center;
+}
+
+.align-stretch {
+    /* (Default) Gli elementi si allungano per riempire l'altezza.
+       Nota: funziona solo se gli elementi non hanno un'altezza fissa (height) impostata. */
+    align-items: stretch;
+}
+
+
+/* --- SEZIONE 4: WRAP (Andare a capo) --- */
+
+.wrap-example {
+    /* Se gli elementi sono troppi, vanno a capo invece di schiacciarsi */
+    flex-wrap: wrap;
+}
+
+
+/* --- SEZIONE 5: PROPRIETÀ SUI SINGOLI FIGLI (Items) --- */
+
+/* Nota: Queste proprietà vanno messe sull'ITEM, non sul container */
+
+.grow-item {
+    /* flex-grow: 1 dice all'elemento: 
+       "Prenditi tutto lo spazio vuoto disponibile nella riga".
+       Se width era 100px, ora diventerà molto più largo. */
+    flex-grow: 1;
+    background-color: #28a745; /* Verde per distinguerlo */
+}
+
+.self-end {
+    /* align-self sovrascrive la regola del genitore (align-items)
+       solo per questo specifico elemento.
+       Qui diciamo: "Tu vai in basso, anche se gli altri sono centrati". */
+    align-self: flex-end;
+    background-color: #dc3545; /* Rosso per distinguerlo */
+}

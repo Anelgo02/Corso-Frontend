@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lezione Flexbox: Esempi Pratici</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Guida Pratica a Flexbox</h1>
+
+    <section>
+        <h2>1. Flex Direction (Row vs Column)</h2>
+        <p>Il comportamento di default è la riga (row).</p>
+        
+        <div class="flex-container direction-row">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+        </div>
+
+        <p>Possiamo cambiare l'asse principale in colonna (column).</p>
+        <div class="flex-container direction-column">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+        </div>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>2. Justify Content (Asse Principale)</h2>
+        <p>Come distribuiamo lo spazio vuoto orizzontale?</p>
+
+        <p><code>center</code></p>
+        <div class="flex-container justify-center">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+        </div>
+
+        <p><code>space-between</code> (Molto usato per le Navbar)</p>
+        <div class="flex-container justify-between">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+        </div>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>3. Align Items (Asse Trasversale/Verticale)</h2>
+        <p>Per vedere questo effetto, il contenitore deve avere un'altezza definita.</p>
+
+        <p><code>center</code> (Centratura verticale perfetta)</p>
+        <div class="flex-container height-fixed align-center">
+            <div class="item">1</div>
+            <div class="item big-item">2</div> <div class="item">3</div>
+        </div>
+
+        <p><code>stretch</code> (Valore di default: si allungano)</p>
+        <div class="flex-container height-fixed align-stretch">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+        </div>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>4. Flex Wrap</h2>
+        <p>Cosa succede se gli elementi sono troppi per stare in una riga?</p>
+
+        <div class="flex-container wrap-example">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+            <div class="item">7</div>
+            <div class="item">8</div>
+        </div>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>5. Proprietà sui Figli (Flex-Grow & Align-Self)</h2>
+        <p>Possiamo controllare i singoli elementi.</p>
+
+        <div class="flex-container height-fixed">
+            <div class="item">Normale</div>
+            <div class="item grow-item">Io prendo tutto lo spazio (flex-grow: 1)</div>
+            <div class="item self-end">Io vado giù (align-self)</div>
+        </div>
+    </section>
+
+    <br><br><br>
+
+</body>
+</html>
